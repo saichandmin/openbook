@@ -1,0 +1,93 @@
+Here’s a template for your README file that covers all the requested sections:
+
+---
+
+# Project Name
+
+## Table of Contents
+1. [Project Overview](#project-overview)
+2. [Prerequisites](#prerequisites)
+3. [Setup Instructions](#setup-instructions)
+4. [Running the Backend Server](#running-the-backend-server)
+5. [Database Schema](#database-schema)
+6. [API Documentation](#api-documentation)
+7. [Database Setup](#database-setup)
+8. [Additional Information](#additional-information)
+
+## Project Overview
+Provide a brief description of the project, its purpose, and key features.
+
+## Prerequisites
+- Node.js (version)
+- PostgreSQL or MySQL (version)
+- npm or yarn
+- Any other dependencies your project requires
+
+## Setup Instructions
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yourusername/your-repo.git
+   cd your-repo
+   ```
+
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Create a `.env` File**:
+   Create a `.env` file in the root of the project and add the following environment variables:
+   ```
+   DATABASE_URL=your_database_url
+   JWT_SECRET=your_jwt_secret
+   ```
+
+4. **Set Up the Database**:
+   Follow the instructions in the [Database Setup](#database-setup) section.
+
+## Running the Backend Server
+To start the server, run:
+```bash
+npm run dev
+# or
+yarn dev
+```
+This will start the server on `http://localhost:3000`.
+
+## Database Schema
+Include an ER Diagram or a description of your database schema. You can use tools like Lucidchart, draw.io, or any ER diagram software. 
+
+### Example ER Diagram
+![ER Diagram](link_to_your_ER_diagram)
+
+### Schema Description
+- **Users**: Stores user information such as email and password.
+- **Contacts**: Stores contact information associated with a user.
+
+## API Documentation
+You can use tools like Swagger or Postman to document your API.
+
+### Example Postman Collection
+- Provide a link to your Postman collection or a brief description of the endpoints.
+- Include details on how to import the collection into Postman.
+
+### Swagger Documentation
+If using Swagger, provide instructions on how to access it once the server is running.
+
+## Database Setup
+- **Migrations**: Describe how to run migrations.
+  ```bash
+  npm run migrate
+  # or
+  yarn migrate
+  ```
+- Provide details on any initial data seeding if applicable.
+
+## Additional Information
+- Any additional notes, instructions, or relevant information for developers or users.
+
+---
+
+Feel free to customize each section according to your project's specifics. Including links, commands, or any other relevant details will enhance clarity for users setting up the project. Let me know if you need help with any particular section!

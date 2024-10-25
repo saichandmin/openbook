@@ -1,0 +1,18 @@
+// utils/contactService.js
+import { sequelize } from '../config/database'; // Adjust path based on your structure
+import Contact from '../models/Contact';
+
+export async function processContacts(contacts) {
+  const transaction = await sequelize.transaction();
+
+  try {
+    for (const contact of contacts) {
+      // Validate contact data here (ensure fields are present and valid)
+      await Contact.create(contact, { transaction });
+    }
+    await transaction.commit();
+  } catch (error) {
+    await transaction.rollback();
+    throw error; // Handle the error appropriately
+  }
+}
